@@ -49,53 +49,53 @@ class Quiz{
 
 //Answers
 let question = [
-  new Question('2 + 2 = ?',[
-    new Answer('0', 0),
-    new Answer('1', 0),
-    new Answer('4', 1),
-    new Answer('5', 0)
+  new Question('как называются четыре Факультета Хогвартса?',[
+    new Answer('Гриффиндор, Пуффендуй, Когтевран и Слизерин', 1),
+    new Answer('Грифон, Ворон, Слон и Змея', 0),
+    new Answer('Север, Восток, Запад и Юг', 0),
+    new Answer('Красный, Синий, Зеленый и Оранжевый', 0)
   ]),
-  new Question('5 + 2 = ?',[
-    new Answer('0', 0),
-    new Answer('7', 1),
-    new Answer('10', 0),
-    new Answer('5', 0)
+  new Question(' что является национальным животным Шотландии?',[
+    new Answer('лошадь', 0),
+    new Answer('единорог', 1),
+    new Answer('волк', 0),
+    new Answer('корова', 0)
   ]),
-  new Question('2 + 0 = ?',[
-    new Answer('0', 0),
-    new Answer('1', 0),
-    new Answer('2', 1),
-    new Answer('5', 0)
+  new Question('зачем к женским трусам всегда пришивают бантики',[
+    new Answer('благодаря бантику трусики можно надеть правильной стороной в темноте', 1),
+    new Answer('потому что это секси', 0),
+    new Answer('дань истории женским панталонам', 0),
+    new Answer('не бантики а розочки', 0)
   ]),
-  new Question('2 + 10 = ?',[
-    new Answer('12', 1),
-    new Answer('1', 0),
-    new Answer('14', 0),
-    new Answer('5', 0)
+  new Question('смертельная доза агуши',[
+    new Answer('100 упаковок', 0),
+    new Answer('69 упаковки', 0),
+    new Answer('44 упаковки', 1),
+    new Answer('от агуши еще никто не умирал', 0)
   ]),
-  new Question('2 + 11 = ?',[
-    new Answer('0', 0),
-    new Answer('1', 0),
-    new Answer('13', 1),
-    new Answer('5', 0)
+  new Question('из чего сделан самый крепкий дом в “Трех поросятах”?',[
+    new Answer('кирпич', 1),
+    new Answer('палочки', 0),
+    new Answer('солома', 0),
+    new Answer('бамбук', 0)
   ]),
-  new Question('2 * 3 = ?',[
-    new Answer('9', 0),
-    new Answer('18', 0),
-    new Answer('6', 1),
-    new Answer('5', 0)
+  new Question('как называется маленький пластмассовый кусочек на конце шнурка?',[
+    new Answer('строка', 0),
+    new Answer('чехол', 0),
+    new Answer('кружево', 0),
+    new Answer('аглет', 1)
   ]),
-  new Question('2 + 1.1 = ?',[
-    new Answer('3.1', 1),
-    new Answer('2.1', 0),
-    new Answer('2.2', 0),
-    new Answer('0', 0)
+  new Question('сколько длится мгновение?',[
+    new Answer('60 секунд', 0),
+    new Answer('90 секунд', 1),
+    new Answer('120 секунд', 0),
+    new Answer('180 секунд', 0)
   ]),
-  new Question('2 - 0 = ?',[
-    new Answer('0', 0),
-    new Answer('1', 0),
-    new Answer('2', 1),
-    new Answer('5', 0)
+  new Question('как долго длилась Столетняя война?',[
+    new Answer('116 лет', 1),
+    new Answer('100 лет', 0),
+    new Answer('50 лет', 0),
+    new Answer('101 год', 0)
   ])
 ];
 
@@ -124,7 +124,11 @@ function Update(){
     Init();
 
   }else if(quiz.question.length = quiz.current){
-    alert('Your Score ' + quiz.End());
+    alert('Your Score ' + quiz.End() + '/' + quiz.question.length);
+
+    if(confirm('Начать заново тест ?')){
+      location.reload();
+    }
   }
 };
 
